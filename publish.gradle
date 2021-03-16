@@ -40,7 +40,7 @@ afterEvaluate {
 			// Creates a Maven publication called "release".
 			release(MavenPublication) {
 				// Applies the component for the release build variant.
-				from components.release
+//				from components.release
 
 				// Adds javadocs and sources as separate jars.
 				artifact androidJavadocsJar
@@ -67,7 +67,7 @@ afterEvaluate {
  * Bintray publish configuration
  */
 
-apply plugin: 'com.jfrog.bintray'
+// apply plugin: 'com.jfrog.bintray'
 
 group "cz.adaptech.android"
 version android.defaultConfig.versionName
@@ -75,6 +75,7 @@ version android.defaultConfig.versionName
 Properties properties = new Properties()
 properties.load(new FileInputStream(project.rootProject.file('local.properties')))
 
+/*
 bintray {
 	user = properties.getProperty("bintray.user")
 	key = properties.getProperty("bintray.apikey")
@@ -101,3 +102,4 @@ bintray {
 		}
 	}
 }
+*/
